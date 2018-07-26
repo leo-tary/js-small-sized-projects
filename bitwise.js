@@ -123,15 +123,15 @@ console.log(permission.userPermission);
 const hasPermisson = permission.checkUserPermissions('readPermission' , false);
 console.log(hasPermisson);
 
-// Get User's Permission - Varient (detailed = name else number)
+// Get User's Permission - Varient (details = name else number)
 
-const permissions = permission.getPermissions();
+const permissionName = permission.getPermissions();
+console.log(permissionName);
+
+// To Check if User's permission is valid
+
+const permissions = permission.checkUserPermissions(3,true);
 console.log(permissions);
-
-// To Check if User's permission is valid - this should be merged with (checkUserPermissions)
-
-const perms = permission.checkUserPermissions(3,true);
-console.log(perms);
 
 // Remove "read" access (that means no access from now for user)
 
